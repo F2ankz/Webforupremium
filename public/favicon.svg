@@ -1,5 +1,1 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
-  <rect width="64" height="64" rx="16" fill="#1d462c"/>
-  <text x="32" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="700" fill="#f7f2e9">FORU</text>
-  <circle cx="52" cy="18" r="4" fill="#d9b76c"/>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><rect width="64" height="64" rx="16" fill="#262923"/><text x="23" y="48" font-family="Georgia,serif" font-size="44" fill="#f5f3ed">F</text><circle cx="46" cy="17" r="5" fill="#90977c"/></svg>

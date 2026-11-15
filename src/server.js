@@ -111,6 +111,12 @@ function servePublic(res, filename, type) {
 const DEFAULT_LINE_URL = "https://line.me/R/ti/p/%40437hyoco";
 
 const MIME_TYPES = {
+  ".html": "text/html; charset=utf-8",
+  ".css": "text/css; charset=utf-8",
+  ".js": "text/javascript; charset=utf-8",
+  ".json": "application/json; charset=utf-8",
+  ".xml": "application/xml; charset=utf-8",
+  ".txt": "text/plain; charset=utf-8",
   ".png": "image/png",
   ".jpg": "image/jpeg",
   ".jpeg": "image/jpeg",
@@ -121,22 +127,29 @@ const MIME_TYPES = {
   ".mp4": "video/mp4"
 };
 
-function serveSafeSubdir(res, urlPathname) {
+function serveStaticPath(res, urlPathname) {
   let decoded;
   try {
     decoded = decodeURIComponent(urlPathname);
   } catch {
-    return send(res, 400, "Bad request");
+    return false;
   }
-  const fullPath = path.resolve(publicDir, "." + decoded);
-  if (!fullPath.startsWith(publicDir + path.sep) || !fs.existsSync(fullPath) || !fs.statSync(fullPath).isFile()) {
-    return send(res, 404, "Not found");
+  let fullPath = path.resolve(publicDir, "." + decoded);
+  if (fullPath !== publicDir && !fullPath.startsWith(publicDir + path.sep)) {
+    return false;
+  }
+  if (fs.existsSync(fullPath) && fs.statSync(fullPath).isDirectory()) {
+    fullPath = path.join(fullPath, "index.html");
+  }
+  if (!fs.existsSync(fullPath) || !fs.statSync(fullPath).isFile()) {
+    return false;
   }
   const ext = path.extname(fullPath).toLowerCase();
   const mime = MIME_TYPES[ext];
-  if (!mime) return send(res, 404, "Not found");
-  res.writeHead(200, { "Content-Type": mime, "Cache-Control": "public, max-age=3600" });
-  return res.end(fs.readFileSync(fullPath));
+  if (!mime) return false;
+  res.writeHead(200, { "Content-Type": mime, "Cache-Control": "no-store" });
+  res.end(fs.readFileSync(fullPath));
+  return true;
 }
 
 function lineAddUrl() {
@@ -158,15 +171,6 @@ const server = http.createServer(async (req, res) => {
     return send(res, 200, JSON.stringify({ ok: true }), "application/json; charset=utf-8");
   }
 
-  if (req.method === "GET" && (url.pathname === "/" || url.pathname === "/index.html")) {
-    return servePublic(res, "index.html", "text/html; charset=utf-8");
-  }
-  if (req.method === "GET" && url.pathname === "/home.css") return servePublic(res, "home.css", "text/css; charset=utf-8");
-  if (req.method === "GET" && url.pathname === "/home.js") return servePublic(res, "home.js", "text/javascript; charset=utf-8");
-  if (req.method === "GET" && url.pathname === "/favicon.svg") return servePublic(res, "favicon.svg", "image/svg+xml");
-  if (req.method === "GET" && (url.pathname.startsWith("/assets/") || url.pathname.startsWith("/catalogs/"))) {
-    return serveSafeSubdir(res, url.pathname);
-  }
   if (req.method === "GET" && url.pathname === "/line") {
     const destination = lineAddUrl();
     res.writeHead(302, { Location: destination, "Cache-Control": "no-store" });
@@ -202,10 +206,14 @@ const server = http.createServer(async (req, res) => {
   if (req.method === "GET" && (url.pathname === "/admin" || url.pathname === "/admin/")) {
     return servePublic(res, "admin.html", "text/html; charset=utf-8");
   }
-  if (req.method === "GET" && url.pathname === "/admin/app.js") return servePublic(res, "app.js", "text/javascript; charset=utf-8");
-  if (req.method === "GET" && url.pathname === "/admin/styles.css") return servePublic(res, "styles.css", "text/css; charset=utf-8");
+  if (req.method === "GET" && url.pathname === "/admin/app.js") return servePublic(res, "admin-app.js", "text/javascript; charset=utf-8");
+  if (req.method === "GET" && url.pathname === "/admin/styles.css") return servePublic(res, "admin-styles.css", "text/css; charset=utf-8");
   if (req.method === "GET" && url.pathname === "/api/orders") return send(res, 200, JSON.stringify(listOrders()), "application/json; charset=utf-8");
   if (req.method === "GET" && url.pathname === "/api/handoffs") return send(res, 200, JSON.stringify(listHandoffs()), "application/json; charset=utf-8");
+
+  if (req.method === "GET" && !url.pathname.startsWith("/admin") && !url.pathname.startsWith("/api/") && serveStaticPath(res, url.pathname)) {
+    return;
+  }
 
   return send(res, 404, "Not found");
 });
