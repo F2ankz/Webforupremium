@@ -108,15 +108,46 @@ function servePublic(res, filename, type) {
   send(res, 200, fs.readFileSync(fullPath), type);
 }
 
+const DEFAULT_LINE_URL = "https://line.me/R/ti/p/%40437hyoco";
+
+const MIME_TYPES = {
+  ".png": "image/png",
+  ".jpg": "image/jpeg",
+  ".jpeg": "image/jpeg",
+  ".webp": "image/webp",
+  ".avif": "image/avif",
+  ".svg": "image/svg+xml",
+  ".pdf": "application/pdf",
+  ".mp4": "video/mp4"
+};
+
+function serveSafeSubdir(res, urlPathname) {
+  let decoded;
+  try {
+    decoded = decodeURIComponent(urlPathname);
+  } catch {
+    return send(res, 400, "Bad request");
+  }
+  const fullPath = path.resolve(publicDir, "." + decoded);
+  if (!fullPath.startsWith(publicDir + path.sep) || !fs.existsSync(fullPath) || !fs.statSync(fullPath).isFile()) {
+    return send(res, 404, "Not found");
+  }
+  const ext = path.extname(fullPath).toLowerCase();
+  const mime = MIME_TYPES[ext];
+  if (!mime) return send(res, 404, "Not found");
+  res.writeHead(200, { "Content-Type": mime, "Cache-Control": "public, max-age=3600" });
+  return res.end(fs.readFileSync(fullPath));
+}
+
 function lineAddUrl() {
   const candidate = process.env.LINE_ADD_URL;
-  if (!candidate) return null;
+  if (!candidate) return DEFAULT_LINE_URL;
   try {
     const url = new URL(candidate);
-    if (!["line.me", "lin.ee"].includes(url.hostname)) return null;
+    if (!["line.me", "lin.ee"].includes(url.hostname)) return DEFAULT_LINE_URL;
     return url.toString();
   } catch {
-    return null;
+    return DEFAULT_LINE_URL;
   }
 }
 
@@ -132,11 +163,12 @@ const server = http.createServer(async (req, res) => {
   }
   if (req.method === "GET" && url.pathname === "/home.css") return servePublic(res, "home.css", "text/css; charset=utf-8");
   if (req.method === "GET" && url.pathname === "/home.js") return servePublic(res, "home.js", "text/javascript; charset=utf-8");
-  if (req.method === "GET" && url.pathname === "/assets/hero-umbrella.png") return servePublic(res, "assets/hero-umbrella.png", "image/png");
-  if (req.method === "GET" && url.pathname === "/assets/hero-products-v2.png") return servePublic(res, "assets/hero-products-v2.png", "image/png");
+  if (req.method === "GET" && url.pathname === "/favicon.svg") return servePublic(res, "favicon.svg", "image/svg+xml");
+  if (req.method === "GET" && (url.pathname.startsWith("/assets/") || url.pathname.startsWith("/catalogs/"))) {
+    return serveSafeSubdir(res, url.pathname);
+  }
   if (req.method === "GET" && url.pathname === "/line") {
     const destination = lineAddUrl();
-    if (!destination) return send(res, 503, "กรุณาตั้งค่า LINE_ADD_URL ก่อนเปิดใช้งานปุ่มแอดไลน์");
     res.writeHead(302, { Location: destination, "Cache-Control": "no-store" });
     return res.end();
   }

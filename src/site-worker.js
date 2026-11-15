@@ -1,3 +1,5 @@
+const DEFAULT_LINE_URL = "https://line.me/R/ti/p/%40437hyoco";
+
 function validLineUrl(value) {
   if (!value) return null;
 
@@ -18,13 +20,8 @@ export default {
     }
 
     if (url.pathname === "/line") {
-      const destination = validLineUrl(env.LINE_ADD_URL);
-      if (destination) return Response.redirect(destination.toString(), 302);
-
-      return new Response("กรุณาตั้งค่าลิงก์ LINE Official Account", {
-        status: 503,
-        headers: { "content-type": "text/plain; charset=utf-8" }
-      });
+      const destination = validLineUrl(env.LINE_ADD_URL) || new URL(DEFAULT_LINE_URL);
+      return Response.redirect(destination.toString(), 302);
     }
 
     return env.ASSETS.fetch(request);

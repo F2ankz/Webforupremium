@@ -1,66 +1,1050 @@
 <!doctype html>
 <html lang="th">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="FORU PREMIUM รับผลิตร่มพรีเมียมสกรีนโลโก้สำหรับองค์กร">
-  <title>FORU PREMIUM · ร่มพรีเมียมสกรีนโลโก้</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/home.css">
-</head>
-<body>
-  <header class="site-header">
-    <div class="header-inner">
-      <a class="brand" href="#home" aria-label="FORU PREMIUM หน้าแรก">
-        <span class="brand-name">FORU</span>
-        <span class="brand-subtitle">PREMIUM</span>
-      </a>
-
-      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-navigation">
-        <span class="sr-only">เปิดเมนู</span>
-        <svg viewBox="0 0 24 24" aria-hidden="true">
-          <path d="M4 7h16M4 12h16M4 17h16" />
-        </svg>
-      </button>
-
-      <nav id="main-navigation" class="main-nav" aria-label="เมนูหลัก">
-        <a class="is-active" href="#home">หน้าแรก</a>
-        <a href="#products">สินค้า</a>
-        <a href="#portfolio">ผลงาน</a>
-        <a href="#about">เกี่ยวกับเรา</a>
-        <a class="nav-contact" href="#contact">ติดต่อเรา</a>
-      </nav>
-    </div>
-  </header>
-
-  <main>
-    <section id="home" class="hero" aria-labelledby="hero-title">
-      <div class="hero-content">
-        <h1 id="hero-title">ร่มพรีเมียม<br>สกรีนโลโก้<span aria-hidden="true">.</span></h1>
-        <p class="hero-description">สวย ใช้งานจริง เหมาะสำหรับองค์กร</p>
-        <div class="hero-rule" aria-hidden="true"></div>
-        <p class="hero-minimum">ขั้นต่ำเพียง 100 คัน</p>
-
-        <a class="line-button" href="/line" target="_blank" rel="noopener noreferrer">
-          <span class="line-icon" aria-hidden="true">
-            <svg viewBox="0 0 52 52">
-              <path d="M26 5C14.4 5 5 12.8 5 22.5c0 8.7 7.5 16 17.7 17.3 1.1.2 2.6.7 3 1.6.4.8.2 2.2.1 3.1l-.5 3c-.2.9-.7 3.5 3 1.9 3.7-2.2 10-7.4 13.7-12.7 2.6-2.9 4-6.6 4-10.1C46 12.8 37.6 5 26 5Z" />
-              <text x="26" y="27" text-anchor="middle">LINE</text>
-            </svg>
-          </span>
-          <span>แอดไลน์</span>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>FORU PREMIUM | ผลิตและจำหน่ายของพรีเมียมองค์กรครบวงจร ร่ม กระบอกน้ำ กิฟต์เซ็ต กระเป๋าผ้า</title>
+    <meta
+      name="description"
+      content="FORU PREMIUM โรงงานรับผลิตและจำหน่ายของพรีเมียมองค์กรครบวงจร ร่มพรีเมียม กระบอกน้ำเก็บอุณหภูมิ ชุดกิฟต์เซ็ตผู้บริหาร กระเป๋าผ้าแคนวาส พัดลมพกพา พร้อมวางแบบโลโก้ฟรี มาตรฐาน QC 100%"
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="FORU PREMIUM | ผลิตและจำหน่ายของพรีเมียมองค์กรครบวงจร" />
+    <meta
+      property="og:description"
+      content="รับผลิตและจำหน่ายร่มพรีเมียม กระบอกน้ำ ชุดกิฟต์เซ็ต กระเป๋าผ้าแคนวาส พัดลมพกพา และของที่ระลึกองค์กร มาตรฐานโรงงาน"
+    />
+    <meta property="og:image" content="/assets/hero-products-v2.png" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@300;400;500;600;700&family=Prompt:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/home.css" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "FORU PREMIUM",
+        "url": "https://forupremium.com",
+        "logo": "https://forupremium.com/assets/foru-logo.png",
+        "description": "ผู้ผลิตและจำหน่ายของพรีเมียมองค์กรครบวงจร ร่มพรีเมียม กระบอกน้ำ ชุดกิฟต์เซ็ต กระเป๋าผ้าแคนวาส และสินค้าสั่งผลิตพร้อมโลโก้",
+        "telephone": "+66-91-885-9893",
+        "email": "sales@forupremium.com",
+        "sameAs": ["https://line.me/R/ti/p/%40437hyoco"]
+      }
+    </script>
+  </head>
+  <body>
+    <!-- ═══ HEADER ═══ -->
+    <header class="site-header" id="siteHeader">
+      <div class="header-inner">
+        <a class="brand" href="#home" aria-label="FORU PREMIUM หน้าแรก">
+          <img
+            class="brand-logo-img"
+            src="/assets/foru-logo.png"
+            alt="FORU - Made For You"
+            width="148"
+            height="44"
+          />
         </a>
+
+        <nav class="main-nav" id="mainNav" aria-label="เมนูหลัก">
+          <a href="#home" class="is-active">หน้าแรก</a>
+          <a href="#customers">ลูกค้าของเรา</a>
+          <a href="#products">หมวดสินค้า</a>
+          <a href="#catalogs">แคตตาล็อก</a>
+          <a href="#portfolio">ผลงานผลิตจริง</a>
+          <a href="#about">ขั้นตอนการผลิต</a>
+          <a href="#contact">ติดต่อเรา</a>
+        </nav>
+
+        <div class="header-actions">
+          <a
+            class="header-line-btn"
+            href="/line"
+            target="_blank"
+            rel="noopener"
+            aria-label="แอดไลน์ FORU PREMIUM"
+          >
+            <span class="header-line-badge" aria-hidden="true">LINE</span>
+            <span>แอดไลน์ @437hyoco</span>
+          </a>
+
+          <button
+            class="menu-toggle"
+            type="button"
+            aria-label="เปิดเมนูนำทาง"
+            aria-controls="mainNav"
+            aria-expanded="false"
+          >
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M4 7h16M4 12h16M4 17h16" />
+            </svg>
+          </button>
+        </div>
       </div>
+    </header>
 
-      <div class="hero-visual" aria-hidden="true">
-        <img src="/assets/hero-products-v2.png" alt="">
+    <main>
+      <!-- ═══ HERO BANNER ═══ -->
+      <section class="hero" id="home" aria-labelledby="heroHeading">
+        <div class="hero-inner">
+          <div class="hero-content">
+            <div class="hero-eyebrow">
+              <span class="hero-eyebrow-dot" aria-hidden="true"></span>
+              <span>FORU PREMIUM · โรงงานผู้ผลิตและจัดจำหน่ายของพรีเมียมองค์กร</span>
+            </div>
+
+            <h1 id="heroHeading">
+              ผลิตและจำหน่าย<br />
+              <span class="accent-gold">ของพรีเมียมองค์กร<span class="nowrap">ครบวงจร<span class="dot-gold">.</span></span></span>
+            </h1>
+
+            <p class="hero-description">
+              รับผลิตและจำหน่ายร่มพรีเมียม กระบอกน้ำเก็บอุณหภูมิ ชุดกิฟต์เซ็ตผู้บริหาร
+              กระเป๋าผ้าแคนวาส พัดลมพกพา และชุดสมุดปากกา
+              พร้อมจัดวางโลโก้ตาม<span class="nowrap">อัตลักษณ์แบรนด์</span>ด้วยมาตรฐานการผลิตระดับโรงงาน
+            </p>
+
+            <ul class="hero-highlights">
+              <li>บริการวางแบบ Mockup โลโก้ฟรี</li>
+              <li>คัดสรรวัสดุเกรดพรีเมียม QC 100%</li>
+              <li>ผลิตและจัดส่งตรงเวลาทั่วประเทศ</li>
+            </ul>
+
+            <div class="hero-cta-row">
+              <a
+                class="line-button"
+                href="/line"
+                target="_blank"
+                rel="noopener"
+                aria-label="แอดไลน์เพื่อสอบถามรายละเอียดสินค้า"
+              >
+                <span class="line-icon-box" aria-hidden="true">
+                  <svg viewBox="0 0 48 48" role="img" aria-hidden="true">
+                    <path
+                      fill="#06C755"
+                      d="M24 7C13.5 7 5 13.86 5 22.32c0 7.57 6.74 13.91 15.85 15.11.62.13 1.46.41 1.67.95.19.49.12 1.25.06 1.74l-.27 1.63c-.08.49-.39 1.91 1.68 1.04 2.07-.87 11.17-6.58 15.24-11.26C42.06 28.36 43 25.5 43 22.32 43 13.86 34.5 7 24 7Z"
+                    />
+                    <path
+                      fill="#FFFFFF"
+                      d="M15.6 25.9h-4.15a.75.75 0 0 1-.75-.75v-6.3a.75.75 0 1 1 1.5 0v5.55h3.4a.75.75 0 1 1 0 1.5Zm2.95-.75a.75.75 0 1 1-1.5 0v-6.3a.75.75 0 1 1 1.5 0v6.3Zm8.15 0a.75.75 0 0 1-.75.75h-.17a.75.75 0 0 1-.6-.3l-3.23-4.37v3.92a.75.75 0 1 1-1.5 0v-6.3c0-.41.34-.75.75-.75h.18c.24 0 .46.11.6.3l3.22 4.37v-3.92a.75.75 0 1 1 1.5 0v6.3Zm6.4-3.9a.75.75 0 1 1 0 1.5h-2.65v1.65h2.65a.75.75 0 1 1 0 1.5h-3.4a.75.75 0 0 1-.75-.75v-6.3c0-.41.34-.75.75-.75h3.4a.75.75 0 1 1 0 1.5h-2.65v1.65h2.65Z"
+                    />
+                  </svg>
+                </span>
+                <span>แอดไลน์</span>
+              </a>
+
+              <a class="hero-secondary-btn" href="#products">
+                <span>ดูหมวดหมู่สินค้า</span>
+                <span aria-hidden="true">↓</span>
+              </a>
+            </div>
+          </div>
+
+          <div class="hero-visual">
+            <img
+              src="/assets/hero-products-v2.png"
+              alt="ชุดสินค้าพรีเมียมองค์กร FORU ประกอบด้วยกล่องกิฟต์เซ็ต ร่มด้ามไม้ กระบอกน้ำสแตนเลส และกระเป๋าผ้าแคนวาส"
+              width="720"
+              height="500"
+              fetchpriority="high"
+            />
+          </div>
+        </div>
+      </section>
+
+      <!-- ═══ STATS STRIP ═══ -->
+      <section class="stats-strip" aria-label="ข้อมูลภาพรวมการผลิต">
+        <div class="stats-grid">
+          <div class="stat-item">
+            <span class="stat-number" data-count="500" data-suffix="+">500+</span>
+            <span class="stat-label">องค์กรและแบรนด์ที่ไว้วางใจ</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-number" data-count="100000" data-suffix="+">100,000+</span>
+            <span class="stat-label">ชิ้นงานผลิตและส่งมอบ</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-number" data-count="200" data-suffix="+">200+</span>
+            <span class="stat-label">รูปแบบสินค้าพรีเมียมให้เลือก</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-number" data-count="100" data-suffix="%">100%</span>
+            <span class="stat-label">ตรวจสอบคุณภาพ QC ก่อนจัดส่ง</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- ═══ TRUSTED BRANDS DUAL-ROW MARQUEE (VFOODS STYLE) ═══ -->
+      <section class="cust-sec" id="customers" aria-labelledby="customersHeading">
+        <div class="sec-head">
+          <span class="sec-eyebrow">TRUSTED BY LEADING BRANDS</span>
+          <h2 id="customersHeading">แบรนด์ชั้นนำที่ไว้วางใจให้เราผลิต</h2>
+          <p>
+            ส่วนหนึ่งของบริษัทและองค์กรชั้นนำในหลากหลายอุตสาหกรรม
+            ที่เลือกให้เราดูแลการผลิตของที่ระลึกและสินค้าพรีเมียมประจำองค์กร
+          </p>
+        </div>
+
+        <div class="logo-marquee" aria-label="รายชื่อแบรนด์ชั้นนำที่ไว้วางใจให้เราผลิต">
+          <!-- Row 1: Leftward continuous scroll (7 logos x 4 = 2 identical halves of 14 items) -->
+          <div class="logo-row">
+            <div class="logo-track">
+              <!-- Set 1 (Accessible) -->
+              <div class="logo-item"><img src="/assets/clients/scg.webp" alt="SCG" width="180" height="100" loading="lazy" /></div>
+              <div class="logo-item"><img src="/assets/clients/thai-summit.webp" alt="Thai Summit Group" width="180" height="100" loading="lazy" /></div>
+              <div class="logo-item"><img src="/assets/clients/scotch.webp" alt="Scotch" width="180" height="100" loading="lazy" /></div>
+              <div class="logo-item"><img src="/assets/clients/dos-life.webp" alt="DOS Life" width="180" height="100" loading="lazy" /></div>
+              <div class="logo-item"><img src="/assets/clients/hop-inn.webp" alt="HOP INN" width="180" height="100" loading="lazy" /></div>
+              <div class="logo-item"><img src="/assets/clients/ufc.webp" alt="UFC" width="180" height="100" loading="lazy" /></div>
+              <div class="logo-item"><img src="/assets/clients/foodstar.webp" alt="FoodStar" width="180" height="100" loading="lazy" /></div>
+              <!-- Set 2 -->
+              <div class="logo-item" aria-hidden="true"><img src="/assets/clients/scg.webp" alt="" width="180" height="100" loading="lazy" /></div>
+              <div class="logo-item" aria-hidden="true"><img src="/assets/clients/thai-summit.webp" alt="" width="180" height="100" loading="lazy" /></div>
+              <div class="logo-item" aria-hidden="true"><img src="/assets/clients/scotch.webp" alt="" width="180" height="100" loading="lazy" /></div>
+              <div class="logo-item" aria-hidden="true"><img src="/assets/clients/dos-life.webp" alt="" width="180" height="100" loading="lazy" /></div>
+              <div class="logo-item" aria-hidden="true"><img src="/assets/clients/hop-inn.webp" alt="" width="180" height="100" loading="lazy" /></div>
+              <div class="logo-item" aria-hidden="true"><img src="/assets/clients/ufc.webp" alt="" width="180" height="100" loading="lazy" /></div>
+              <div class="logo-item" aria-hidden="true"><img src="/assets/clients/foodstar.webp" alt="" width="180" height="100" loading="lazy" /></div>
+              <!-- Set 3 (Start of identical second half) -->
+              <div class="logo-item" aria-hidden="true"><img src="/assets/clients/scg.webp" alt="" width="180" height="100" loading="lazy" /></div>
+              <div class="logo-item" aria-hidden="true"><img src="/assets/clients/thai-summit.webp" alt="" width="180" height="100" loading="lazy" /></div>
+              <div class="logo-item" aria-hidden="true"><img src="/assets/clients/scotch.webp" alt="" width="180" height="100" loading="lazy" /></div>
+              <div class="logo-item" aria-hidden="true"><img src="/assets/clients/dos-life.webp" alt="" width="180" height="100" loading="lazy" /></div>
+              <div class="logo-item" aria-hidden="true"><img src="/assets/clients/hop-inn.webp" alt="" width="180" height="100" loading="lazy" /></div>
+              <div class="logo-item" aria-hidden="true"><img src="/assets/clients/ufc.webp" alt="" width="180" height="100" loading="lazy" /></div>
+              <div class="logo-item" aria-hidden="true"><img src="/assets/clients/foodstar.webp" alt="" width="180" height="100" loading="lazy" /></div>
+              <!-- Set 4 -->
+              <div class="logo-item" aria-hidden="true"><img src="/assets/clients/scg.webp" alt="" width="180" height="100" loading="lazy" /></div>
+              <div class="logo-item" aria-hidden="true"><img src="/assets/clients/thai-summit.webp" alt="" width="180" height="100" loading="lazy" /></div>
+              <div class="logo-item" aria-hidden="true"><img src="/assets/clients/scotch.webp" alt="" width="180" height="100" loading="lazy" /></div>
+              <div class="logo-item" aria-hidden="true"><img src="/assets/clients/dos-life.webp" alt="" width="180" height="100" loading="lazy" /></div>
+              <div class="logo-item" aria-hidden="true"><img src="/assets/clients/hop-inn.webp" alt="" width="180" height="100" loading="lazy" /></div>
+              <div class="logo-item" aria-hidden="true"><img src="/assets/clients/ufc.webp" alt="" width="180" height="100" loading="lazy" /></div>
+              <div class="logo-item" aria-hidden="true"><img src="/assets/clients/foodstar.webp" alt="" width="180" height="100" loading="lazy" /></div>
+            </div>
+          </div>
+
+          <!-- Row 2: Rightward continuous scroll (7 logos x 4 = 2 identical halves of 14 items) -->
+          <div class="logo-row logo-row--rev">
+            <div class="logo-track">
+              <!-- Set 1 (Accessible) -->
+              <div class="logo-item"><img src="/assets/clients/toyotsu.webp" alt="Toyotsu Chemiplas" width="180" height="100" loading="lazy" /></div>
+              <div class="logo-item"><img src="/assets/clients/synchrotron.webp" alt="Synchrotron Thailand สถาบันวิจัยแสงซินโครตรอน" width="180" height="100" loading="lazy" /></div>
+              <div class="logo-item"><img src="/assets/clients/general-beverage.webp" alt="General Beverage" width="180" height="100" loading="lazy" /></div>
+              <div class="logo-item"><img src="/assets/clients/lucky-union-foods.webp" alt="Lucky Union Foods" width="180" height="100" loading="lazy" /></div>
+              <div class="logo-item"><img src="/assets/clients/pi-science.webp" alt="PI Inspired by Science" width="180" height="100" loading="lazy" /></div>
+              <div class="logo-item"><img src="/assets/clients/tako.webp" alt="TAKO" width="180" height="100" loading="lazy" /></div>
+              <div class="logo-item"><img src="/assets/clients/unique.webp" alt="Unique Engineering and Construction" width="180" height="100" loading="lazy" /></div>
+              <!-- Set 2 -->
+              <div class="logo-item" aria-hidden="true"><img src="/assets/clients/toyotsu.webp" alt="" width="180" height="100" loading="lazy" /></div>
+              <div class="logo-item" aria-hidden="true"><img src="/assets/clients/synchrotron.webp" alt="" width="180" height="100" loading="lazy" /></div>
+              <div class="logo-item" aria-hidden="true"><img src="/assets/clients/general-beverage.webp" alt="" width="180" height="100" loading="lazy" /></div>
+              <div class="logo-item" aria-hidden="true"><img src="/assets/clients/lucky-union-foods.webp" alt="" width="180" height="100" loading="lazy" /></div>
+              <div class="logo-item" aria-hidden="true"><img src="/assets/clients/pi-science.webp" alt="" width="180" height="100" loading="lazy" /></div>
+              <div class="logo-item" aria-hidden="true"><img src="/assets/clients/tako.webp" alt="" width="180" height="100" loading="lazy" /></div>
+              <div class="logo-item" aria-hidden="true"><img src="/assets/clients/unique.webp" alt="" width="180" height="100" loading="lazy" /></div>
+              <!-- Set 3 (Start of identical second half) -->
+              <div class="logo-item" aria-hidden="true"><img src="/assets/clients/toyotsu.webp" alt="" width="180" height="100" loading="lazy" /></div>
+              <div class="logo-item" aria-hidden="true"><img src="/assets/clients/synchrotron.webp" alt="" width="180" height="100" loading="lazy" /></div>
+              <div class="logo-item" aria-hidden="true"><img src="/assets/clients/general-beverage.webp" alt="" width="180" height="100" loading="lazy" /></div>
+              <div class="logo-item" aria-hidden="true"><img src="/assets/clients/lucky-union-foods.webp" alt="" width="180" height="100" loading="lazy" /></div>
+              <div class="logo-item" aria-hidden="true"><img src="/assets/clients/pi-science.webp" alt="" width="180" height="100" loading="lazy" /></div>
+              <div class="logo-item" aria-hidden="true"><img src="/assets/clients/tako.webp" alt="" width="180" height="100" loading="lazy" /></div>
+              <div class="logo-item" aria-hidden="true"><img src="/assets/clients/unique.webp" alt="" width="180" height="100" loading="lazy" /></div>
+              <!-- Set 4 -->
+              <div class="logo-item" aria-hidden="true"><img src="/assets/clients/toyotsu.webp" alt="" width="180" height="100" loading="lazy" /></div>
+              <div class="logo-item" aria-hidden="true"><img src="/assets/clients/synchrotron.webp" alt="" width="180" height="100" loading="lazy" /></div>
+              <div class="logo-item" aria-hidden="true"><img src="/assets/clients/general-beverage.webp" alt="" width="180" height="100" loading="lazy" /></div>
+              <div class="logo-item" aria-hidden="true"><img src="/assets/clients/lucky-union-foods.webp" alt="" width="180" height="100" loading="lazy" /></div>
+              <div class="logo-item" aria-hidden="true"><img src="/assets/clients/pi-science.webp" alt="" width="180" height="100" loading="lazy" /></div>
+              <div class="logo-item" aria-hidden="true"><img src="/assets/clients/tako.webp" alt="" width="180" height="100" loading="lazy" /></div>
+              <div class="logo-item" aria-hidden="true"><img src="/assets/clients/unique.webp" alt="" width="180" height="100" loading="lazy" /></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ═══ PRODUCTS SHOWCASE & INTERACTIVE FILTER ═══ -->
+      <section class="products-sec" id="products" aria-labelledby="productsHeading">
+        <div class="container">
+          <div class="sec-head">
+            <span class="sec-eyebrow">OUR PRODUCT RANGE</span>
+            <h2 id="productsHeading">หมวดหมู่สินค้าที่ผลิตและจำหน่าย</h2>
+            <p>
+              เลือกชมกลุ่มสินค้ายอดนิยมสำหรับของขวัญผู้บริหาร งานสัมมนา และกิจกรรมองค์กร
+              สามารถกดเลือกหมวดหมู่หรือคลิกที่สินค้าเพื่อดูรายละเอียดสเปกการผลิต
+            </p>
+          </div>
+
+          <div class="filter-bar" role="tablist" aria-label="กรองหมวดหมู่สินค้า">
+            <button class="filter-btn is-active" type="button" data-filter="all">ทั้งหมด</button>
+            <button class="filter-btn" type="button" data-filter="giftset">ชุดกิฟต์เซ็ตผู้บริหาร</button>
+            <button class="filter-btn" type="button" data-filter="umbrella">ร่มพรีเมียม</button>
+            <button class="filter-btn" type="button" data-filter="drinkware">กระบอกน้ำเก็บอุณหภูมิ</button>
+            <button class="filter-btn" type="button" data-filter="bag">กระเป๋าผ้าแคนวาส</button>
+            <button class="filter-btn" type="button" data-filter="gadget">แกดเจ็ต &amp; สมุดปากกา</button>
+          </div>
+
+          <div class="products-grid" id="productsGrid">
+            <!-- 1. Gift Set Green -->
+            <article
+              class="product-card"
+              data-category="giftset"
+              data-title="ชุดกิฟต์เซ็ตสมุดโน้ต ปากกา และกระบอกน้ำ (3-in-1 Set)"
+              data-eyebrow="EXECUTIVE GIFT SET"
+              data-image="/assets/products/gift-set-green.webp"
+              data-desc="ชุดของขวัญองค์กรยอดนิยม ประกอบด้วยสมุดโน้ตปกหนัง PU ขนาด A5 ปากกาโลหะดีไซน์เรียบหรู และกระบอกน้ำเก็บอุณหภูมิฝาล็อก บรรจุในกล่องแข็งบุซับในพร้อมพิมพ์โลโก้หน้ากล่อง"
+              data-specs="อุปกรณ์ในชุด:สมุดโน้ต PU + ปากกาโลหะ + กระบอกน้ำสแตนเลส|เทคนิคโลโก้:สกรีน / เลเซอร์ / ปั๊มฟอยล์ทอง-เงินบนกล่อง|โทนสียอดนิยม:เขียวมรกต กรมท่า ดำ เทา แดงเบอร์กันดี|บรรจุภัณฑ์:กล่องกระดาษแข็งจั่วปังพร้อมถาดไดคัทพอดีชิ้นงาน"
+            >
+              <div class="product-media" data-open-spec>
+                <span class="product-badge">ชุดกิฟต์เซ็ต</span>
+                <img
+                  src="/assets/products/gift-set-green.webp"
+                  alt="ชุดกิฟต์เซ็ตสมุดโน้ต ปากกา และกระบอกน้ำ โทนสีเขียวมรกต"
+                  width="800"
+                  height="800"
+                  loading="lazy"
+                />
+                <span class="product-zoom-hint">คลิกดูสเปกสินค้า</span>
+              </div>
+              <div class="product-body">
+                <h3>ชุดกิฟต์เซ็ตสมุดโน้ต ปากกา และกระบอกน้ำ</h3>
+                <p>เซ็ต 3 ชิ้นคุมโทนสีเดียวกัน บรรจุในกล่องแข็งบุกำมะหยี่ เหมาะสำหรับมอบให้ลูกค้าคนสำคัญและงานสัมมนา</p>
+                <div class="spec-tags">
+                  <span>กล่องแข็งพรีเมียม</span>
+                  <span>เลเซอร์ / สกรีนโลโก้</span>
+                  <span>เลือกจับคู่สีได้</span>
+                </div>
+                <div class="product-actions">
+                  <button class="btn-spec" type="button" data-open-spec>ดูรายละเอียดสเปก</button>
+                  <a class="btn-card-line" href="/line" target="_blank" rel="noopener">สอบถามทาง LINE</a>
+                </div>
+              </div>
+            </article>
+
+            <!-- 2. Gift Set Executive -->
+            <article
+              class="product-card"
+              data-category="giftset"
+              data-title="ชุดกิฟต์เซ็ตผู้บริหาร 4 ชิ้น พร้อมกล่องของขวัญ"
+              data-eyebrow="EXECUTIVE GIFT SET"
+              data-image="/assets/products/gift-set-executive.webp"
+              data-desc="ชุดของขวัญระดับผู้บริหาร จัดเซ็ตครบครันทั้งกระบอกน้ำสูญญากาศ ร่มพับกันยูวี สมุดโน้ตปกหนัง และปากกาโลหะ สามารถปรับเปลี่ยนรายการสินค้าด้านในให้ตรงกับงบประมาณและภาพลักษณ์องค์กรได้"
+              data-specs="การจัดเซ็ต:ปรับเลือกสินค้า 2–5 ชิ้นตามความต้องการ|เทคนิคโลโก้:ปั๊มจม / ปั๊มเคทอง / เลเซอร์ / UV DFT|วัสดุกล่อง:กล่องแข็งฝาครอบหรือฝาแม่เหล็ก พร้อมถุงกระดาษเข้าชุด|การใช้งาน:ของขวัญปีใหม่ งานครบรอบองค์กร ต้อนรับผู้บริหาร"
+            >
+              <div class="product-media" data-open-spec>
+                <span class="product-badge">จัดเซ็ตตามสั่ง</span>
+                <img
+                  src="/assets/products/gift-set-executive.webp"
+                  alt="ชุดกิฟต์เซ็ตผู้บริหารพรีเมียมพร้อมกล่องของขวัญ"
+                  width="800"
+                  height="800"
+                  loading="lazy"
+                />
+                <span class="product-zoom-hint">คลิกดูสเปกสินค้า</span>
+              </div>
+              <div class="product-body">
+                <h3>ชุดกิฟต์เซ็ตผู้บริหาร จัดเซ็ตตามสั่ง</h3>
+                <p>ออกแบบและจัดชุดของขวัญระดับ VIP เลือกผสมสินค้าและสั่งทำกล่องพร้อมถุงกระดาษพิมพ์แบรนด์ครบชุด</p>
+                <div class="spec-tags">
+                  <span>Custom Set 2-5 ชิ้น</span>
+                  <span>ปั๊มฟอยล์หน้ากล่อง</span>
+                  <span>ถุงกระดาษเข้าชุด</span>
+                </div>
+                <div class="product-actions">
+                  <button class="btn-spec" type="button" data-open-spec>ดูรายละเอียดสเปก</button>
+                  <a class="btn-card-line" href="/line" target="_blank" rel="noopener">สอบถามทาง LINE</a>
+                </div>
+              </div>
+            </article>
+
+            <!-- 3. Umbrella Capsule -->
+            <article
+              class="product-card"
+              data-category="umbrella"
+              data-title="ร่มพับแคปซูลกันยูวี UPF50+ ขนาดพกพา"
+              data-eyebrow="PREMIUM UMBRELLA"
+              data-image="/assets/products/umbrella-capsule.webp"
+              data-desc="ร่มพับ 5 ตอนดีไซน์มินิมอล มาพร้อมเคสแคปซูลแข็งกันน้ำพกพาสะดวก เนื้อผ้าร่มเคลือบไวนิลดำด้านในช่วยป้องกันรังสี UV ได้มากกว่า 99% (UPF50+) และกันฝนได้ยอดเยี่ยม"
+              data-specs="เนื้อผ้าร่ม:ผ้า Pongee เคลือบ Black UV Coating (UPF50+)|โครงร่ม:โครงไฟเบอร์กลาสผสมอลูมิเนียม น้ำหนักเบา|เทคนิคโลโก้:สกรีนบนตัวร่ม และพิมพ์โลโก้บนกล่องแคปซูล|สีที่มีจำหน่าย:มากกว่า 10 เฉดสีองค์กร"
+            >
+              <div class="product-media" data-open-spec>
+                <span class="product-badge">ร่มพรีเมียม</span>
+                <img
+                  src="/assets/products/umbrella-capsule.webp"
+                  alt="ร่มพับแคปซูลกันยูวี UPF50+ หลากหลายสี"
+                  width="800"
+                  height="800"
+                  loading="lazy"
+                />
+                <span class="product-zoom-hint">คลิกดูสเปกสินค้า</span>
+              </div>
+              <div class="product-body">
+                <h3>ร่มพับแคปซูลกันยูวี UPF50+</h3>
+                <p>ร่มพับพกพาขนาดกะทัดรัดพร้อมกล่องแคปซูลเข้าชุด ผ้าเคลือบกันแดด UPF50+ พิมพ์โลโก้ได้ทั้งตัวร่มและเคส</p>
+                <div class="spec-tags">
+                  <span>กันยูวี UPF50+</span>
+                  <span>พร้อมเคสแคปซูล</span>
+                  <span>น้ำหนักเบาพกพาง่าย</span>
+                </div>
+                <div class="product-actions">
+                  <button class="btn-spec" type="button" data-open-spec>ดูรายละเอียดสเปก</button>
+                  <a class="btn-card-line" href="/line" target="_blank" rel="noopener">สอบถามทาง LINE</a>
+                </div>
+              </div>
+            </article>
+
+            <!-- 4. Umbrella Golf -->
+            <article
+              class="product-card"
+              data-category="umbrella"
+              data-title="ร่มกอล์ฟ 2 ชั้น โครงไฟเบอร์กลาสต้านลมแรง"
+              data-eyebrow="PREMIUM UMBRELLA"
+              data-image="/assets/products/umbrella-golf.webp"
+              data-desc="ร่มกอล์ฟขนาดใหญ่ 30 นิ้ว ดีไซน์ผ้า 2 ชั้นระบายลม ลดแรงปะทะจากลมกรรโชก โครงไฟเบอร์กลาสแข็งแรงยืดหยุ่นสูง ด้ามจับยาง EVA กระชับมือ เหมาะสำหรับงานอีเวนต์และลูกค้าระดับผู้บริหาร"
+              data-specs="ขนาดหน้ากว้าง:30 นิ้ว (กางครอบคลุม 2–3 ท่าน)|โครงสร้าง:แกนและก้านไฟเบอร์กลาสต้านลม ปุ่มกดกางอัตโนมัติ|เนื้อผ้าร่ม:ผ้า Pongee ทอแน่นเคลือบกันน้ำและกันรังสี UV|เทคนิคโลโก้:สกรีนโลโก้ 1–8 ช่องร่ม หรือพิมพ์ Digital Print"
+            >
+              <div class="product-media" data-open-spec>
+                <span class="product-badge">ร่มพรีเมียม</span>
+                <img
+                  src="/assets/products/umbrella-golf.webp"
+                  alt="ร่มกอล์ฟพรีเมียม 2 ชั้น โครงไฟเบอร์กลาส"
+                  width="800"
+                  height="800"
+                  loading="lazy"
+                />
+                <span class="product-zoom-hint">คลิกดูสเปกสินค้า</span>
+              </div>
+              <div class="product-body">
+                <h3>ร่มกอล์ฟ 2 ชั้น โครงไฟเบอร์กลาส 30 นิ้ว</h3>
+                <p>โครงสร้างแข็งแรงพิเศษพร้อมช่องระบายลม 2 ชั้น กางอัตโนมัติ รองรับการสกรีนโลโก้ขนาดใหญ่คมชัดทุกมุมมอง</p>
+                <div class="spec-tags">
+                  <span>ขนาดใหญ่ 30 นิ้ว</span>
+                  <span>โครงไฟเบอร์กลาส</span>
+                  <span>ผ้า Pongee กัน UV</span>
+                </div>
+                <div class="product-actions">
+                  <button class="btn-spec" type="button" data-open-spec>ดูรายละเอียดสเปก</button>
+                  <a class="btn-card-line" href="/line" target="_blank" rel="noopener">สอบถามทาง LINE</a>
+                </div>
+              </div>
+            </article>
+
+            <!-- 5. Tumbler Matte -->
+            <article
+              class="product-card"
+              data-category="drinkware"
+              data-title="กระบอกน้ำสแตนเลสเก็บอุณหภูมิ SUS304 ผิวแมตต์"
+              data-eyebrow="STAINLESS DRINKWARE"
+              data-image="/assets/products/tumbler-matte.webp"
+              data-desc="กระบอกน้ำสูญญากาศ 2 ชั้น ผลิตจากสแตนเลส Food Grade SUS304 เคลือบผิวสัมผัส Powder Coat แบบด้าน จับถนัดมือ ไม่เกิดไอน้ำเกาะข้างแก้ว เก็บความเย็นและร้อนได้ยาวนาน 8–12 ชั่วโมง"
+              data-specs="วัสดุภายใน:สแตนเลสแท้ SUS304 ปลอดภัยไร้สนิม (BPA Free)|ความจุ:500 ml / 600 ml|การเก็บอุณหภูมิ:รักษาความร้อน-เย็นได้ 8–12 ชั่วโมง|เทคนิคโลโก้:ยิงเลเซอร์คมชัดถาวร / สกรีนสี / พิมพ์ UV รอบใบ"
+            >
+              <div class="product-media" data-open-spec>
+                <span class="product-badge">กระบอกน้ำ</span>
+                <img
+                  src="/assets/products/tumbler-matte.webp"
+                  alt="กระบอกน้ำสแตนเลสเก็บอุณหภูมิ SUS304 เคลือบผิวแมตต์"
+                  width="800"
+                  height="800"
+                  loading="lazy"
+                />
+                <span class="product-zoom-hint">คลิกดูสเปกสินค้า</span>
+              </div>
+              <div class="product-body">
+                <h3>กระบอกน้ำเก็บอุณหภูมิ SUS304 ผิวแมตต์</h3>
+                <p>สแตนเลส Food Grade ผนังสูญญากาศ 2 ชั้น ไม่เป็นไอน้ำเกาะรอบแก้ว รองรับงานยิงเลเซอร์และพิมพ์สี่สี UV</p>
+                <div class="spec-tags">
+                  <span>สแตนเลส SUS304</span>
+                  <span>เก็บเย็น-ร้อน 12 ชม.</span>
+                  <span>เลเซอร์ไม่ลอก</span>
+                </div>
+                <div class="product-actions">
+                  <button class="btn-spec" type="button" data-open-spec>ดูรายละเอียดสเปก</button>
+                  <a class="btn-card-line" href="/line" target="_blank" rel="noopener">สอบถามทาง LINE</a>
+                </div>
+              </div>
+            </article>
+
+            <!-- 6. Tumbler Carry -->
+            <article
+              class="product-card"
+              data-category="drinkware"
+              data-title="กระบอกน้ำเก็บความเย็นพร้อมฝาหูหิ้วพกพา"
+              data-eyebrow="STAINLESS DRINKWARE"
+              data-image="/assets/products/tumbler-carry.webp"
+              data-desc="กระบอกน้ำทรงสปอร์ตดีไซน์ทันสมัย มาพร้อมฝาเกลียวซีลยางกันรั่วซึม 100% และหูหิ้วพับเก็บได้ เหมาะกับการพกพาไปทำงาน ออกกำลังกาย หรือเป็นของที่ระลึกรักษ์โลกในองค์กร"
+              data-specs="วัสดุ:สแตนเลส SUS304 / SUS316 เกรดอาหาร|ความจุ:550 ml – 750 ml|จุดเด่น:ฝาปิดซีลซิลิโคนกันน้ำหก พร้อมหูหิ้วในตัว|บรรจุภัณฑ์:กล่องกระดาษขาวหรือสั่งพิมพ์กล่องแบรนด์เฉพาะ"
+            >
+              <div class="product-media" data-open-spec>
+                <span class="product-badge">กระบอกน้ำ</span>
+                <img
+                  src="/assets/products/tumbler-carry.webp"
+                  alt="กระบอกน้ำเก็บความเย็นดีไซน์พกพาพร้อมหูหิ้ว"
+                  width="800"
+                  height="800"
+                  loading="lazy"
+                />
+                <span class="product-zoom-hint">คลิกดูสเปกสินค้า</span>
+              </div>
+              <div class="product-body">
+                <h3>กระบอกน้ำสูญญากาศฝาหูหิ้วกันน้ำรั่ว</h3>
+                <p>ดีไซน์คล่องตัวใช้งานได้ทุกวัน ซีลกันรั่วสนิทพกใส่กระเป๋าได้มั่นใจ พร้อมสกรีนหรือเลเซอร์โลโก้องค์กร</p>
+                <div class="spec-tags">
+                  <span>ฝาซีลกันรั่ว 100%</span>
+                  <span>หูหิ้วพกพาสะดวก</span>
+                  <span>พิมพ์ UV รอบใบได้</span>
+                </div>
+                <div class="product-actions">
+                  <button class="btn-spec" type="button" data-open-spec>ดูรายละเอียดสเปก</button>
+                  <a class="btn-card-line" href="/line" target="_blank" rel="noopener">สอบถามทาง LINE</a>
+                </div>
+              </div>
+            </article>
+
+            <!-- 7. Canvas Tote -->
+            <article
+              class="product-card"
+              data-category="bag"
+              data-title="กระเป๋าผ้าแคนวาสทูโทน งานตัดเย็บพรีเมียม"
+              data-eyebrow="ECO &amp; CANVAS BAG"
+              data-image="/assets/products/canvas-tote.webp"
+              data-desc="รับผลิตกระเป๋าผ้าแคนวาส ผ้าดิบ และผ้า 600D ตามขนาดและรูปทรงที่ต้องการ งานตัดเย็บประณีต ทรงสวยตั้งอยู่ตัว เลือกจับคู่สีสายสะพายและฐานกระเป๋าให้ตรงกับสี CI ของแบรนด์ได้"
+              data-specs="ความหนาผ้า:แคนวาส 12 oz / 14 oz / 16 oz หรือผ้าดิบญี่ปุ่น|รูปแบบงาน:สั่งตัดตามขนาด ขยายก้น-ขยายข้าง ติดซิปหรือกระดุมแม่เหล็ก|เทคนิคโลโก้:งานปักฝีเข็มแน่น / สกรีนซิลค์สกรีน / พิมพ์ DFT สี่สี|การนำไปใช้:แคมเปญ CSR งานอีเวนต์ ชุดต้อนรับพนักงานใหม่"
+            >
+              <div class="product-media" data-open-spec>
+                <span class="product-badge">กระเป๋าผ้าสั่งผลิต</span>
+                <img
+                  src="/assets/products/canvas-tote.webp"
+                  alt="กระเป๋าผ้าแคนวาสทูโทนพร้อมงานปักโลโก้"
+                  width="800"
+                  height="800"
+                  loading="lazy"
+                />
+                <span class="product-zoom-hint">คลิกดูสเปกสินค้า</span>
+              </div>
+              <div class="product-body">
+                <h3>กระเป๋าผ้าแคนวาสทูโทน สั่งตัดตามแบบ</h3>
+                <p>เนื้อผ้าแคนวาสหนาอยู่ทรง เลือกสีสายและก้นกระเป๋าตาม CI องค์กร รองรับทั้งงานปักและงานสกรีนเต็มพื้นที่</p>
+                <div class="spec-tags">
+                  <span>ผ้าแคนวาส 12–16 oz</span>
+                  <span>สั่งตัดตามขนาด</span>
+                  <span>งานปัก / สกรีนคมชัด</span>
+                </div>
+                <div class="product-actions">
+                  <button class="btn-spec" type="button" data-open-spec>ดูรายละเอียดสเปก</button>
+                  <a class="btn-card-line" href="/line" target="_blank" rel="noopener">สอบถามทาง LINE</a>
+                </div>
+              </div>
+            </article>
+
+            <!-- 8. Jet Fan -->
+            <article
+              class="product-card"
+              data-category="gadget"
+              data-title="พัดลมพกพาความเร็วสูง จอดิจิทัล LED (Jet Fan)"
+              data-eyebrow="CORPORATE GADGET"
+              data-image="/assets/products/jet-fan.webp"
+              data-desc="ของพรีเมียมเทรนด์ใหม่ยอดนิยม พัดลมพกพามอเตอร์ High-Speed ปรับระดับแรงลมได้ละเอียดถึง 199 ระดับ แสดงผลแบตเตอรี่และระดับลมผ่านหน้าจอ LED ชาร์จไวผ่านพอร์ต USB Type-C"
+              data-specs="ระดับแรงลม:ปรับละเอียด 1–199 ระดับ พร้อมจอแสดงผล LED|พอร์ตชาร์จ:USB Type-C แบตเตอรี่ลิเธียมความจุสูง|เทคนิคโลโก้:สกรีนโลโก้หรือพิมพ์ UV คมชัดบริเวณด้ามจับ|อุปกรณ์มาตรฐาน:ตัวเครื่อง สายชาร์จ สายคล้องมือ และกล่องบรรจุ"
+            >
+              <div class="product-media" data-open-spec>
+                <span class="product-badge">แกดเจ็ตยอดนิยม</span>
+                <img
+                  src="/assets/products/jet-fan.webp"
+                  alt="พัดลมพกพาความเร็วสูงหน้าจอ LED สกรีนโลโก้ได้"
+                  width="800"
+                  height="800"
+                  loading="lazy"
+                />
+                <span class="product-zoom-hint">คลิกดูสเปกสินค้า</span>
+              </div>
+              <div class="product-body">
+                <h3>พัดลมพกพา High-Speed จอดิจิทัล LED</h3>
+                <p>ลมแรงระดับเทอร์โบ ปรับได้ 199 ระดับ ชาร์จผ่าน Type-C ของที่ระลึกยุคใหม่ที่ผู้รับหยิบใช้งานจริงทุกวัน</p>
+                <div class="spec-tags">
+                  <span>จอแสดงผล LED</span>
+                  <span>ชาร์จไว Type-C</span>
+                  <span>สกรีนโลโก้ด้ามจับ</span>
+                </div>
+                <div class="product-actions">
+                  <button class="btn-spec" type="button" data-open-spec>ดูรายละเอียดสเปก</button>
+                  <a class="btn-card-line" href="/line" target="_blank" rel="noopener">สอบถามทาง LINE</a>
+                </div>
+              </div>
+            </article>
+
+            <!-- 9. Notebook & Pen -->
+            <article
+              class="product-card"
+              data-category="gadget"
+              data-title="ชุดสมุดโน้ตปกหนัง PU พร้อมปากกาโลหะสลักชื่อ"
+              data-eyebrow="OFFICE &amp; STATIONERY"
+              data-image="/assets/products/notebook-pen.webp"
+              data-desc="สมุดโน้ตปกหนัง PU เกรดพรีเมียมเย็บขอบประณีต กระดาษถนอมสายตาเขียนลื่นไม่ซึม จับคู่กับปากกาลูกลื่นด้ามโลหะน้ำหนักสมดุล เหมาะสำหรับงานประชุม สัมมนา และชุด Onboarding พนักงาน"
+              data-specs="ขนาดสมุด:A5 มาตรฐาน กระดาษถนอมสายตา 80–100 แกรม|เทคนิคปกสมุด:ปั๊มจม (Deboss) / ปั๊มฟอยล์ทอง-เงิน / พิมพ์สกรีน|เทคนิคปากกา:ยิงเลเซอร์โลโก้หรือสกรีนด้ามปากกา|ตัวเลือกเสริม:สั่งแทรกหน้าสีแนะนำองค์กรด้านในสมุดได้"
+            >
+              <div class="product-media" data-open-spec>
+                <span class="product-badge">สมุด &amp; ปากกา</span>
+                <img
+                  src="/assets/products/notebook-pen.webp"
+                  alt="สมุดโน้ตปกหนัง PU พร้อมปากกาโลหะสำหรับองค์กร"
+                  width="800"
+                  height="800"
+                  loading="lazy"
+                />
+                <span class="product-zoom-hint">คลิกดูสเปกสินค้า</span>
+              </div>
+              <div class="product-body">
+                <h3>สมุดโน้ตปกหนัง PU และปากกาโลหะ</h3>
+                <p>ปกหนังสัมผัสนุ่มปั๊มจมหรือปั๊มฟอยล์โลโก้สวยงาม คู่กับปากกาโลหะเลเซอร์ชื่อองค์กร สำหรับงานประชุมและสัมมนา</p>
+                <div class="spec-tags">
+                  <span>กระดาษถนอมสายตา</span>
+                  <span>ปั๊มจม / ปั๊มฟอยล์</span>
+                  <span>ปากกาเลเซอร์โลโก้</span>
+                </div>
+                <div class="product-actions">
+                  <button class="btn-spec" type="button" data-open-spec>ดูรายละเอียดสเปก</button>
+                  <a class="btn-card-line" href="/line" target="_blank" rel="noopener">สอบถามทาง LINE</a>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ═══ DOWNLOADABLE E-CATALOGS ═══ -->
+      <section class="catalogs-sec" id="catalogs" aria-labelledby="catalogsHeading">
+        <div class="container">
+          <div class="sec-head">
+            <span class="sec-eyebrow">E-CATALOG LIBRARY</span>
+            <h2 id="catalogsHeading">เปิดดูและดาวน์โหลดแคตตาล็อกสินค้า</h2>
+            <p>
+              รวบรวมรุ่นสินค้า สี ขนาด และรายละเอียดเชิงเทคนิคไว้ในไฟล์ PDF
+              เพื่อความสะดวกของฝ่ายจัดซื้อและการนำเสนอภายในองค์กร
+            </p>
+          </div>
+
+          <div class="catalogs-grid">
+            <article class="catalog-card">
+              <div class="catalog-cover">
+                <img
+                  src="/catalogs/FORU_Umbrella_Catalog-cover.webp"
+                  alt="หน้าปกแคตตาล็อกร่มพรีเมียม FORU Umbrella Catalog"
+                  width="640"
+                  height="360"
+                  loading="lazy"
+                />
+              </div>
+              <div class="catalog-info">
+                <h3>แคตตาล็อกร่มพรีเมียมครบทุกรุ่น</h3>
+                <p>รวมร่มพับ 2 ตอน, 3 ตอน, ร่มแคปซูล, ร่มตอนเดียวด้ามไม้ และร่มกอล์ฟ 30 นิ้ว พร้อมตารางสีผ้าร่ม</p>
+                <div class="catalog-links">
+                  <a class="btn-pdf-open" href="/catalogs/FORU_Umbrella_Catalog.pdf" target="_blank" rel="noopener">
+                    เปิดอ่านแคตตาล็อก
+                  </a>
+                  <a class="btn-pdf-dl" href="/catalogs/FORU_Umbrella_Catalog.pdf" download>
+                    ดาวน์โหลด PDF
+                  </a>
+                </div>
+              </div>
+            </article>
+
+            <article class="catalog-card">
+              <div class="catalog-cover">
+                <img
+                  src="/catalogs/FORU_Bottle_Catalog-cover.webp"
+                  alt="หน้าปกแคตตาล็อกกระบอกน้ำเก็บอุณหภูมิ FORU Bottle Catalog"
+                  width="640"
+                  height="360"
+                  loading="lazy"
+                />
+              </div>
+              <div class="catalog-info">
+                <h3>แคตตาล็อกกระบอกน้ำและแก้วเก็บความเย็น</h3>
+                <p>รวมกระบอกน้ำสแตนเลส SUS304/316 แก้วทัมเบลอร์ กระบอกน้ำบอกอุณหภูมิ และชุดกิฟต์เซ็ตกระบอกน้ำ</p>
+                <div class="catalog-links">
+                  <a class="btn-pdf-open" href="/catalogs/FORU_Bottle_Catalog.pdf" target="_blank" rel="noopener">
+                    เปิดอ่านแคตตาล็อก
+                  </a>
+                  <a class="btn-pdf-dl" href="/catalogs/FORU_Bottle_Catalog.pdf" download>
+                    ดาวน์โหลด PDF
+                  </a>
+                </div>
+              </div>
+            </article>
+
+            <article class="catalog-card">
+              <div class="catalog-cover">
+                <img
+                  src="/catalogs/FORU_Fan_Catalog-cover.webp"
+                  alt="หน้าปกแคตตาล็อกพัดลมพกพา 2026 FORU Electronic Fan Catalog"
+                  width="640"
+                  height="360"
+                  loading="lazy"
+                />
+              </div>
+              <div class="catalog-info">
+                <h3>แคตตาล็อกพัดลมพกพาและแกดเจ็ต 2026</h3>
+                <p>อัปเดตรุ่นพัดลมพกพา High-Speed, พัดลมตั้งโต๊ะ และพัดลมคล้องคอดีไซน์ใหม่ล่าสุดประจำปี 2026</p>
+                <div class="catalog-links">
+                  <a class="btn-pdf-open" href="/catalogs/FORU_Fan_Catalog.pdf" target="_blank" rel="noopener">
+                    เปิดอ่านแคตตาล็อก
+                  </a>
+                  <a class="btn-pdf-dl" href="/catalogs/FORU_Fan_Catalog.pdf" download>
+                    ดาวน์โหลด PDF
+                  </a>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ═══ REAL PRODUCTION PORTFOLIO ═══ -->
+      <section class="portfolio-sec" id="portfolio" aria-labelledby="portfolioHeading">
+        <div class="container">
+          <div class="sec-head">
+            <span class="sec-eyebrow">PRODUCTION PORTFOLIO</span>
+            <h2 id="portfolioHeading">ตัวอย่างผลงานผลิตจริงจากโรงงาน</h2>
+            <p>
+              ความประณีตของงานสกรีน งานปัก และบรรจุภัณฑ์ที่ผลิตส่งมอบให้ลูกค้าองค์กรจริง
+              คลิกที่รูปภาพเพื่อขยายดูรายละเอียดชิ้นงาน
+            </p>
+          </div>
+
+          <div class="portfolio-grid">
+            <article
+              class="portfolio-card"
+              tabindex="0"
+              role="button"
+              aria-label="ขยายดูผลงาน ชุดกิฟต์เซ็ตสมุดโน้ต ปากกา และถุงกระดาษ JCASH"
+              data-lightbox-image="/assets/portfolio/work-jcash-giftset.webp"
+              data-lightbox-eyebrow="EXECUTIVE GIFT SET &amp; PACKAGING"
+              data-lightbox-title="ชุดกิฟต์เซ็ตสมุดโน้ต ปากกา และถุงกระดาษแบรนด์ JCASH"
+              data-lightbox-desc="งานสั่งผลิตครบชุดคุมโทนสีส้มอัตลักษณ์แบรนด์ ประกอบด้วยกล่องจั่วปังพิมพ์โลโก้ สมุดโน้ตปกหนัง ปากกาโลหะเข้าชุด และถุงกระดาษร้อยเชือกเกลียว"
+            >
+              <div class="portfolio-photo">
+                <img
+                  src="/assets/portfolio/work-jcash-giftset.webp"
+                  alt="ผลงานผลิตจริง ชุดกิฟต์เซ็ตสมุดโน้ต ปากกา และถุงกระดาษแบรนด์ JCASH"
+                  width="900"
+                  height="720"
+                  loading="lazy"
+                />
+              </div>
+              <div class="portfolio-caption">
+                <div>
+                  <span>GIFT SET &amp; PACKAGING</span>
+                  <h3>ชุดกิฟต์เซ็ตและถุงกระดาษแบรนด์ JCASH</h3>
+                </div>
+                <span class="portfolio-zoom-icon" aria-hidden="true">+</span>
+              </div>
+            </article>
+
+            <article
+              class="portfolio-card"
+              tabindex="0"
+              role="button"
+              aria-label="ขยายดูผลงาน กระเป๋าผ้าแคนวาสพิมพ์สี่สีงานประชุม XAFS2026"
+              data-lightbox-image="/assets/portfolio/work-synchrotron-bag.webp"
+              data-lightbox-eyebrow="CANVAS BAG PRINTING"
+              data-lightbox-title="กระเป๋าผ้าแคนวาสพิมพ์ลายงานประชุมนานาชาติ XAFS2026"
+              data-lightbox-desc="ผลงานผลิตกระเป๋าผ้าแคนวาสสีขาวทรงแนวนอน พร้อมงานพิมพ์กราฟิกหลายสีรายละเอียดสูงสำหรับสถาบันวิจัยแสงซินโครตรอน"
+            >
+              <div class="portfolio-photo">
+                <img
+                  src="/assets/portfolio/work-synchrotron-bag.webp"
+                  alt="ผลงานผลิตจริง กระเป๋าผ้าแคนวาสพิมพ์ลายงานประชุม XAFS2026"
+                  width="900"
+                  height="720"
+                  loading="lazy"
+                />
+              </div>
+              <div class="portfolio-caption">
+                <div>
+                  <span>CANVAS TOTE BAG</span>
+                  <h3>กระเป๋าผ้าพิมพ์ลาย XAFS2026 (ซินโครตรอน)</h3>
+                </div>
+                <span class="portfolio-zoom-icon" aria-hidden="true">+</span>
+              </div>
+            </article>
+
+            <article
+              class="portfolio-card"
+              tabindex="0"
+              role="button"
+              aria-label="ขยายดูผลงาน ร่มพับพรีเมียมสกรีนโลโก้ Barracuda"
+              data-lightbox-image="/assets/portfolio/work-barracuda-umbrella.webp"
+              data-lightbox-eyebrow="CUSTOM UMBRELLA"
+              data-lightbox-title="ร่มพับพรีเมียมสีกรมท่าพร้อมสกรีนโลโก้ Barracuda"
+              data-lightbox-desc="งานผลิตร่มพับผ้าร่มกันน้ำกันยูวีสีกรมท่า สกรีนโลโก้สีขาวคมชัดบริเวณชายร่ม ตรวจสอบการกางและโครงสร้างทุกคันก่อนส่งมอบ"
+            >
+              <div class="portfolio-photo">
+                <img
+                  src="/assets/portfolio/work-barracuda-umbrella.webp"
+                  alt="ผลงานผลิตจริง ร่มพับพรีเมียมสกรีนโลโก้ Barracuda"
+                  width="900"
+                  height="720"
+                  loading="lazy"
+                />
+              </div>
+              <div class="portfolio-caption">
+                <div>
+                  <span>PREMIUM UMBRELLA</span>
+                  <h3>ร่มพับพรีเมียมสกรีนโลโก้ Barracuda</h3>
+                </div>
+                <span class="portfolio-zoom-icon" aria-hidden="true">+</span>
+              </div>
+            </article>
+
+            <article
+              class="portfolio-card"
+              tabindex="0"
+              role="button"
+              aria-label="ขยายดูผลงาน กระติกเก็บความเย็นพิมพ์ลาย UFC Refresh"
+              data-lightbox-image="/assets/portfolio/work-ufc-cooler.webp"
+              data-lightbox-eyebrow="PROMOTIONAL COOLER BOX"
+              data-lightbox-title="กระติกเก็บความเย็นพิมพ์ลายสี่สีแบรนด์ UFC Refresh"
+              data-lightbox-desc="งานพิมพ์ภาพกราฟิกความละเอียดสูงสีสันสดใส ทนทานต่อความชื้นและการใช้งานกลางแจ้ง สำหรับกิจกรรมส่งเสริมภาพลักษณ์แบรนด์ UFC"
+            >
+              <div class="portfolio-photo">
+                <img
+                  src="/assets/portfolio/work-ufc-cooler.webp"
+                  alt="ผลงานผลิตจริง กระติกเก็บความเย็นพิมพ์ลายแบรนด์ UFC Refresh"
+                  width="900"
+                  height="720"
+                  loading="lazy"
+                />
+              </div>
+              <div class="portfolio-caption">
+                <div>
+                  <span>CUSTOM MERCHANDISE</span>
+                  <h3>กระติกเก็บความเย็นแบรนด์ UFC Refresh</h3>
+                </div>
+                <span class="portfolio-zoom-icon" aria-hidden="true">+</span>
+              </div>
+            </article>
+
+            <article
+              class="portfolio-card"
+              tabindex="0"
+              role="button"
+              aria-label="ขยายดูผลงาน กล่องบรรจุภัณฑ์ของขวัญองค์กร RATCH PATHANA"
+              data-lightbox-image="/assets/portfolio/work-ratch-packaging.webp"
+              data-lightbox-eyebrow="CORPORATE PACKAGING"
+              data-lightbox-title="บรรจุภัณฑ์กล่องของขวัญพิมพ์โลโก้ RATCH PATHANA"
+              data-lightbox-desc="กล่องบรรจุภัณฑ์สีขาวมินิมอลพร้อมพิมพ์โลโก้องค์กรสองสีแม่นยำตามคู่มือ CI สำหรับบรรจุชุดของที่ระลึกมอบให้ผู้ถือหุ้นและพันธมิตร"
+            >
+              <div class="portfolio-photo">
+                <img
+                  src="/assets/portfolio/work-ratch-packaging.webp"
+                  alt="ผลงานผลิตจริง กล่องของขวัญองค์กรพิมพ์โลโก้ RATCH PATHANA"
+                  width="900"
+                  height="720"
+                  loading="lazy"
+                />
+              </div>
+              <div class="portfolio-caption">
+                <div>
+                  <span>GIFT PACKAGING</span>
+                  <h3>กล่องของขวัญองค์กร RATCH PATHANA</h3>
+                </div>
+                <span class="portfolio-zoom-icon" aria-hidden="true">+</span>
+              </div>
+            </article>
+
+            <article
+              class="portfolio-card"
+              tabindex="0"
+              role="button"
+              aria-label="ขยายดูผลงาน เสื้อโปโลองค์กรปักโลโก้ MAX FITNESS"
+              data-lightbox-image="/assets/portfolio/work-max-polo.webp"
+              data-lightbox-eyebrow="CORPORATE UNIFORM"
+              data-lightbox-title="เสื้อโปโลองค์กรตัดต่อปกและปักโลโก้ MAX FITNESS"
+              data-lightbox-desc="งานสั่งตัดเสื้อโปโลยูนิฟอร์มเนื้อผ้าระบายอากาศดี ปักโลโก้ฝีเข็มละเอียดคมชัดที่อกซ้าย พร้อมดีเทลขลิบปกและแขนเสื้อสีแดง-ขาว"
+            >
+              <div class="portfolio-photo">
+                <img
+                  src="/assets/portfolio/work-max-polo.webp"
+                  alt="ผลงานผลิตจริง เสื้อโปโลองค์กรปักโลโก้ MAX FITNESS"
+                  width="900"
+                  height="720"
+                  loading="lazy"
+                />
+              </div>
+              <div class="portfolio-caption">
+                <div>
+                  <span>CORPORATE APPAREL</span>
+                  <h3>เสื้อโปโลปักโลโก้ MAX FITNESS</h3>
+                </div>
+                <span class="portfolio-zoom-icon" aria-hidden="true">+</span>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ═══ 4-STEP OEM WORKFLOW ═══ -->
+      <section class="process-sec" id="about" aria-labelledby="processHeading">
+        <div class="container">
+          <div class="sec-head">
+            <span class="sec-eyebrow">HOW WE WORK</span>
+            <h2 id="processHeading">มาตรฐานการผลิตที่เข้าใจง่าย ดูแลครบทุกขั้นตอน</h2>
+            <p>
+              ลดภาระงานของฝ่ายจัดซื้อและฝ่ายการตลาด ด้วยระบบการประสานงานที่ชัดเจนตั้งแต่การวางแบบจำลองจนถึงวันส่งมอบ
+            </p>
+          </div>
+
+          <div class="process-grid">
+            <div class="process-step">
+              <span class="step-num">01</span>
+              <h3>แจ้งรูปแบบและจำนวนที่ต้องการ</h3>
+              <p>
+                พูดคุยรายละเอียดหมวดสินค้า โทนสีองค์กร จำนวน และกำหนดวันใช้งาน
+                เพื่อรับข้อมูลสเปกและใบเสนอราคาที่ชัดเจน
+              </p>
+            </div>
+
+            <div class="process-step">
+              <span class="step-num">02</span>
+              <h3>จัดวางโลโก้ขึ้นแบบ Mockup ฟรี</h3>
+              <p>
+                ทีมกราฟิกจัดวางโลโก้ลงบนภาพสินค้าจริง ปรับขนาดและตำแหน่งให้สวยงามถูกต้องตาม CI ขององค์กรก่อนเริ่มผลิต
+              </p>
+            </div>
+
+            <div class="process-step">
+              <span class="step-num">03</span>
+              <h3>ดำเนินการผลิตมาตรฐานโรงงาน</h3>
+              <p>
+                ผลิตด้วยเครื่องจักรที่ทันสมัย รองรับทั้งงานสกรีน เลเซอร์ UV DFT ปั๊มฟอยล์ และงานปัก
+                ควบคุมเฉดสีให้ตรงตามแบบที่อนุมัติ
+              </p>
+            </div>
+
+            <div class="process-step">
+              <span class="step-num">04</span>
+              <h3>ตรวจสอบ QC 100% และจัดส่ง</h3>
+              <p>
+                ตรวจสอบความเรียบร้อยของชิ้นงานและบรรจุภัณฑ์ทุกชิ้นก่อนแพ็กลงกล่อง
+                พร้อมบริการจัดส่งตรงเวลาถึงที่หมายทั่วประเทศ
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ═══ CONTACT & LINE QR SECTION ═══ -->
+      <section class="contact-sec" id="contact" aria-labelledby="contactHeading">
+        <div class="container">
+          <div class="contact-box">
+            <div class="contact-copy">
+              <span class="sec-eyebrow">CONTACT FORU PREMIUM</span>
+              <h2 id="contactHeading">สอบถามข้อมูลการผลิตและขอรับแคตตาล็อก</h2>
+              <p>
+                พูดคุยรายละเอียดสเปกสินค้า ขอไฟล์แคตตาล็อกเพิ่มเติม หรือส่งโลโก้เพื่อประเมินรูปแบบงานผลิตได้สะดวกผ่านทาง
+                LINE Official Account ทีมงานพร้อมให้ข้อมูลอย่างตรงไปตรงมา
+              </p>
+
+              <a
+                class="line-button"
+                href="/line"
+                target="_blank"
+                rel="noopener"
+                aria-label="แอดไลน์ FORU PREMIUM @437hyoco"
+              >
+                <span class="line-icon-box" aria-hidden="true">
+                  <svg viewBox="0 0 48 48" role="img" aria-hidden="true">
+                    <path
+                      fill="#06C755"
+                      d="M24 7C13.5 7 5 13.86 5 22.32c0 7.57 6.74 13.91 15.85 15.11.62.13 1.46.41 1.67.95.19.49.12 1.25.06 1.74l-.27 1.63c-.08.49-.39 1.91 1.68 1.04 2.07-.87 11.17-6.58 15.24-11.26C42.06 28.36 43 25.5 43 22.32 43 13.86 34.5 7 24 7Z"
+                    />
+                    <path
+                      fill="#FFFFFF"
+                      d="M15.6 25.9h-4.15a.75.75 0 0 1-.75-.75v-6.3a.75.75 0 1 1 1.5 0v5.55h3.4a.75.75 0 1 1 0 1.5Zm2.95-.75a.75.75 0 1 1-1.5 0v-6.3a.75.75 0 1 1 1.5 0v6.3Zm8.15 0a.75.75 0 0 1-.75.75h-.17a.75.75 0 0 1-.6-.3l-3.23-4.37v3.92a.75.75 0 1 1-1.5 0v-6.3c0-.41.34-.75.75-.75h.18c.24 0 .46.11.6.3l3.22 4.37v-3.92a.75.75 0 1 1 1.5 0v6.3Zm6.4-3.9a.75.75 0 1 1 0 1.5h-2.65v1.65h2.65a.75.75 0 1 1 0 1.5h-3.4a.75.75 0 0 1-.75-.75v-6.3c0-.41.34-.75.75-.75h3.4a.75.75 0 1 1 0 1.5h-2.65v1.65h2.65Z"
+                    />
+                  </svg>
+                </span>
+                <span>แอดไลน์</span>
+              </a>
+
+              <div class="contact-channels">
+                <a class="contact-pill" href="tel:0918859893">โทร. 091-885-9893</a>
+                <a class="contact-pill" href="mailto:sales@forupremium.com">sales@forupremium.com</a>
+                <a class="contact-pill" href="/line" target="_blank" rel="noopener">LINE ID: @437hyoco</a>
+              </div>
+            </div>
+
+            <div class="qr-card">
+              <img
+                src="/assets/line-qr.png"
+                alt="QR Code สำหรับแอดไลน์ FORU PREMIUM @437hyoco"
+                width="180"
+                height="180"
+                loading="lazy"
+              />
+              <strong>LINE Official: @437hyoco</strong>
+              <span>สแกน QR Code เพื่อพูดคุยกับฝ่ายดูแลลูกค้าองค์กร</span>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- ═══ FOOTER ═══ -->
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <div>
+          <strong>FORU PREMIUM</strong> · ผู้ผลิตและจำหน่ายของพรีเมียมองค์กรครบวงจร
+        </div>
+        <nav class="footer-links" aria-label="ลิงก์ส่วนท้าย">
+          <a href="#home">หน้าแรก</a>
+          <a href="#customers">ลูกค้าของเรา</a>
+          <a href="#products">หมวดสินค้า</a>
+          <a href="#catalogs">แคตตาล็อก PDF</a>
+          <a href="#portfolio">ผลงานผลิตจริง</a>
+          <a href="#contact">ติดต่อเรา</a>
+        </nav>
       </div>
+    </footer>
 
-    </section>
-  </main>
+    <!-- ═══ SHARED QUICK-VIEW SPEC & PORTFOLIO LIGHTBOX MODAL ═══ -->
+    <div class="modal-backdrop" id="detailModal" hidden>
+      <div class="modal-dialog" id="modalDialog" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+        <button class="modal-close" type="button" id="modalCloseBtn" aria-label="ปิดหน้าต่างรายละเอียด">
+          ×
+        </button>
+        <div class="modal-media">
+          <img id="modalImage" src="" alt="" />
+        </div>
+        <div class="modal-content">
+          <span class="sec-eyebrow" id="modalEyebrow"></span>
+          <h3 id="modalTitle"></h3>
+          <p id="modalDesc"></p>
+          <ul class="modal-specs" id="modalSpecs"></ul>
+          <a class="modal-line-cta" id="modalLineCta" href="/line" target="_blank" rel="noopener">
+            สอบถามรุ่นนี้ทาง LINE (@437hyoco)
+          </a>
+        </div>
+      </div>
+    </div>
 
-  <script type="module" src="/home.js"></script>
-</body>
+    <!-- ═══ MOBILE STICKY ACTION BAR ═══ -->
+    <div class="mobile-sticky-bar" aria-label="ช่องทางติดต่อด่วนบนมือถือ">
+      <a class="mobile-sticky-line" href="/line" target="_blank" rel="noopener">
+        แอดไลน์ @437hyoco
+      </a>
+      <a class="mobile-sticky-tel" href="tel:0918859893">
+        โทร 091-885-9893
+      </a>
+    </div>
+
+    <script src="/home.js" defer></script>
+  </body>
 </html>
