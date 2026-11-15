@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="th">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>UPremium · Facebook Orders</title>
+  <link rel="stylesheet" href="/admin/styles.css">
+</head>
+<body>
+  <main>
+    <header>
+      <div>
+        <p class="eyebrow">FACEBOOK AI SALES</p>
+        <h1>ศูนย์รับออเดอร์</h1>
+      </div>
+      <button id="refresh">รีเฟรชข้อมูล</button>
+    </header>
+
+    <section class="stats" aria-label="ภาพรวม">
+      <article><span>ออเดอร์ใหม่</span><strong id="order-count">–</strong></article>
+      <article><span>ยอดรวม</span><strong id="sales-total">–</strong></article>
+      <article class="attention"><span>รอแอดมิน</span><strong id="handoff-count">–</strong></article>
+    </section>
+
+    <section class="panel">
+      <div class="panel-title"><h2>ออเดอร์ล่าสุด</h2><span id="updated-at"></span></div>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>เลขที่</th><th>ลูกค้า</th><th>โทรศัพท์</th><th>ยอดรวม</th><th>สถานะ</th><th>เวลา</th></tr></thead>
+          <tbody id="orders"><tr><td colspan="6" class="empty">กำลังโหลด…</td></tr></tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="panel">
+      <div class="panel-title"><h2>แชตที่รอแอดมิน</h2></div>
+      <div id="handoffs" class="handoffs"><p class="empty">กำลังโหลด…</p></div>
+    </section>
+  </main>
+  <script type="module" src="/admin/app.js"></script>
+</body>
+</html>

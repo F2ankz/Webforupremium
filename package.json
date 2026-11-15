@@ -1,0 +1,16 @@
+{
+  "name": "upremium-facebook-ai-sales",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Facebook Messenger AI sales assistant and order capture",
+  "scripts": {
+    "dev": "node --watch --env-file=.env src/server.js",
+    "start": "node --env-file=.env src/server.js",
+    "deploy": "npx wrangler deploy",
+    "test": "node --test"
+  },
+  "engines": {
+    "node": ">=22"
+  }
+}

@@ -1,0 +1,11 @@
+[
+  {
+    "id": "sample-001",
+    "name": "สินค้าตัวอย่าง",
+    "description": "แก้ไขรายละเอียดสินค้าในไฟล์ data/products.json",
+    "price": 990,
+    "stock": 20,
+    "aliases": ["ตัวอย่าง", "สินค้า 1"],
+    "active": true
+  }
+]
