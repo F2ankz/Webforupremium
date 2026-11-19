@@ -268,3 +268,41 @@ if (requestedCategory) {
   const filter = [...document.querySelectorAll('[data-filter]')].find(b => b.dataset.filter === requestedCategory);
   if (filter) filter.click();
 }
+
+// Interactive Hero Visual Switcher (user-driven, zero jittery auto-jump)
+document.querySelectorAll('[data-hero-switcher]').forEach(stage => {
+  const buttons = [...stage.querySelectorAll('[data-hero-switch]')];
+  const slides = [...stage.querySelectorAll('[data-hero-slide]')];
+  function activate(id) {
+    buttons.forEach(btn => {
+      const on = btn.dataset.heroSwitch === id;
+      btn.classList.toggle('is-active', on);
+      btn.setAttribute('aria-pressed', String(on));
+    });
+    slides.forEach(slide => {
+      const on = slide.dataset.heroSlide === id;
+      slide.hidden = !on;
+      slide.classList.toggle('is-active', on);
+    });
+  }
+  buttons.forEach(btn => btn.addEventListener('click', () => activate(btn.dataset.heroSwitch)));
+});
+
+// Interactive Homepage Tabbed Product Explorer
+document.querySelectorAll('[data-product-shelf]').forEach(shelf => {
+  const tabs = [...shelf.querySelectorAll('[data-shelf-tab]')];
+  const panels = [...shelf.querySelectorAll('[data-shelf-panel]')];
+  function selectTab(id) {
+    tabs.forEach(tab => {
+      const on = tab.dataset.shelfTab === id;
+      tab.classList.toggle('is-active', on);
+      tab.setAttribute('aria-pressed', String(on));
+    });
+    panels.forEach(panel => {
+      const on = panel.dataset.shelfPanel === id;
+      panel.hidden = !on;
+      panel.classList.toggle('is-active', on);
+    });
+  }
+  tabs.forEach(tab => tab.addEventListener('click', () => selectTab(tab.dataset.shelfTab)));
+});
