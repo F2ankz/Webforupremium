@@ -1,4 +1,4 @@
-const DEFAULT_LINE_URL = "https://line.me/R/ti/p/%40437hyoco";
+const DEFAULT_LINE_URL = "https://line.me/R/ti/p/%40forupremium";
 
 function validLineUrl(value) {
   if (!value) return null;
