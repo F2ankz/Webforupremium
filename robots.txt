@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://forupremium.com/sitemap.xml
